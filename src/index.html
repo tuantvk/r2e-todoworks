@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>r2e-todoworks</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        if (process.env.HOT) {
+            let script = document.createElement('script');
+            let port = process.env.PORT || 3000;
+
+            script.async = '';
+            script.src = `http://localhost:${port}/dist/bundle.js`;
+
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>
