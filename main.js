@@ -193,8 +193,8 @@ function updateTray(unread = 0) {
 
 async function autostart() {
     var launcher = new AutoLaunch({
-        name: 'weweChat',
-        path: '/Applications/wewechat.app',
+        name: 'r2e-todoworks',
+        path: '/Applications/r2etodoworks.app',
     });
 
     if (settings.startup) {
@@ -233,8 +233,8 @@ const createMainWindow = () => {
     mainWindow = new BrowserWindow({
         x: mainWindowState.x,
         y: mainWindowState.y,
-        minWidth: 745,
-        minHeight: 450,
+        minWidth: 850,
+        minHeight: 550,
         fullscreenable: true,
         backgroundColor: '#403F4D',
         icon: __dirname + "./resource/dock.icns"

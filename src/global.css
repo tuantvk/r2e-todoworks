@@ -7,14 +7,6 @@
 	background: none;
 	overflow: hidden;
 }
-
-/* html,
-body {
-	margin: 0;
-	padding: 0;
-	background: none;
-	overflow: hidden;
-} */
 @keyframes click {
   0% {
     opacity: 0;
@@ -32,7 +24,7 @@ body {
 }
 body {
   padding: 0;
-  background: #403f4d;
+  background: #F8F8F8;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: lighter;
   overflow-y: scroll;
@@ -53,15 +45,15 @@ body {
   position: relative;
 }
 .form input {
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
   padding: 20px 70px 20px 20px;
   width: 100%;
   height: 70px;
-  background: #2e2d33;
+  background: #a8d8ea;
   border: none;
   border-radius: 3px;
   box-sizing: border-box;
-  color: #fbfafb;
+  color: #252a34;
   font-size: 20px;
   outline: none;
 }
@@ -73,6 +65,7 @@ body {
   height: 30px;
   background: no-repeat url('./assets/images/plus.svg');
   border: none;
+  outline: none;
 }
 .date {
   display: flex;
@@ -96,7 +89,7 @@ body {
 .calendar ,
 .my ,
 .month {
-  color: #fff;
+  color: #252a34;
   font-weight: bold;
 }
 .progress {
@@ -145,11 +138,23 @@ body {
   padding: 20px;
   width: 100%;
   min-height: 70px;
-  background: #4e4d5c;
   border: none;
   border-radius: 3px;
   box-sizing: border-box;
   font-size: 20px;
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
+  transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
+  transition-delay: .1s;
+  border-radius: 4px;
+  transform: translateZ(0);
+  background-color: #fff;
+  overflow: hidden;
+}
+.item:hover {
+  opacity: 1 !important;
+  box-shadow: rgba(45,45,45,0.03) 0px 1px 1px, rgba(49,49,49,0.03) 0px 2px 2px, rgba(42,42,42,0.03) 0px 4px 4px, rgba(32,32,32,0.03) 0px 8px 8px, rgba(49,49,49,0.03) 0px 16px 16px, rgba(35,35,35,0.03) 0px 32px 32px;
+  transform: translate(0, -2px);
+  z-index: 999;
 }
 .item .item-name {
   width: 400px;
