@@ -11,6 +11,7 @@ import { observer, inject } from 'mobx-react';
 export default class ItemList extends React.Component {
 
   _addItem = e => {
+    e.preventDefault();
     this.props.addTodo(this._inputElement.value, 1);
     this._inputElement.value = '';
     this._inputElement.focus();
@@ -20,14 +21,13 @@ export default class ItemList extends React.Component {
     const { list } = this.props;
     return (
       <div className="item-list">
-        <div className="form">
+        <form className="form" onSubmit={this._addItem}>
           <input
             ref={(a) => this._inputElement = a}
             placeholder="Add new item"
             autoFocus
           />
-          <button onClick={this._addItem} />
-        </div>
+        </form>
         {
           list && list.map(item => {
             return (
@@ -38,7 +38,6 @@ export default class ItemList extends React.Component {
                 key={item.id}
                 onComplete={this.completeItem}
                 onDelete={this.props.deleteItem}
-                onPause={this.pauseItem}
               />
             );
           })

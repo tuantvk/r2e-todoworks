@@ -16,7 +16,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider {...stores}>
-        <div>
+        <div className="app">
           <Date />
           <ItemList />
         </div>

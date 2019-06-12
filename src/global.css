@@ -24,7 +24,7 @@
 }
 body {
   padding: 0;
-  background: #F8F8F8;
+  background: #EA5F8E;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: lighter;
   overflow-y: scroll;
@@ -33,53 +33,49 @@ body {
 }
 ::-webkit-scrollbar {
   background-color: #403f4d;
-  width: 1em;
+  width: 0.5em;
 }
-::-webkit-scrollbar-thumb:window-inactive,
+/* ::-webkit-scrollbar-thumb:window-inactive,
 ::-webkit-scrollbar-thumb {
   background: #2e2d33;
   border: 3px solid #403f4d;
   border-radius: 0.5em;
+} */
+.app {
+  background-color: #3c4249;
+  border-radius: 6px;
+  padding: 1em 2em;
+  overflow: hidden;
 }
 .form {
   position: relative;
 }
 .form input {
   margin: 0 0 15px 0;
-  padding: 20px 70px 20px 20px;
+  padding: 10px;
   width: 100%;
-  height: 70px;
-  background: #a8d8ea;
+  height: 35px;
+  background: #343a3f;
   border: none;
   border-radius: 3px;
   box-sizing: border-box;
-  color: #252a34;
-  font-size: 20px;
-  outline: none;
-}
-.form button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
-  background: no-repeat url('./assets/images/plus.svg');
-  border: none;
+  color: #fff;
+  font-size: 15px;
   outline: none;
 }
 .date {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0 40px 0;
-  font-size: 24px;
+  padding: 0 0 20px 0;
+  font-size: 16px;
 }
 .date .calendar {
   display: flex;
   align-items: center;
 }
 .date .calendar .day {
-  font-size: 64px;
+  font-size: 42px;
   font-weight: bold;
 }
 .date .calendar .my {
@@ -89,7 +85,7 @@ body {
 .calendar ,
 .my ,
 .month {
-  color: #252a34;
+  color: #ffffff;
   font-weight: bold;
 }
 .progress {
@@ -133,55 +129,43 @@ body {
 .item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin: 0 0 10px 0;
-  padding: 20px;
+  padding: 5px;
   width: 100%;
-  min-height: 70px;
+  min-height: 30px;
   border: none;
-  border-radius: 3px;
   box-sizing: border-box;
-  font-size: 20px;
-  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
-  transition: box-shadow .3s ease-out, transform .3s ease-out, opacity .2s ease-out;
-  transition-delay: .1s;
-  border-radius: 4px;
-  transform: translateZ(0);
-  background-color: #fff;
+  font-size: 16px;
   overflow: hidden;
-}
-.item:hover {
-  opacity: 1 !important;
-  box-shadow: rgba(45,45,45,0.03) 0px 1px 1px, rgba(49,49,49,0.03) 0px 2px 2px, rgba(42,42,42,0.03) 0px 4px 4px, rgba(32,32,32,0.03) 0px 8px 8px, rgba(49,49,49,0.03) 0px 16px 16px, rgba(35,35,35,0.03) 0px 32px 32px;
-  transform: translate(0, -2px);
-  z-index: 999;
 }
 .item .item-name {
   width: 400px;
   word-break: break-all;
+  color: #fff;
 }
-.item .buttons button {
+.item .complete {
   position: relative;
-  margin: 0 0 0 10px;
-  height: 24px;
+  height: 18px;;
   border: none;
+  outline: none;
+  margin-right: 15px;
 }
-.item .buttons button.delete {
-  width: 24px;
+.buttons button.delete {
+  width: 18px;
   background: no-repeat url('./assets/images/x.svg');
 }
-.item .buttons button.delete:after {
+.buttons button.delete:after {
   background: #e1675a;
 }
-.item .buttons button.pause {
-  width: 24px;
+.buttons button.pause {
+  width: 18px;
   background: no-repeat url('./assets/images/pause.svg');
 }
-.item .buttons button.pause:after {
+.buttons button.pause:after {
   background: #f7f879;
 }
-.item .buttons button.complete {
-  width: 30px;
+button.complete {
+  width: 18px;
   background: no-repeat url('./assets/images/check.svg');
 }
 .item .buttons button.complete:after {
