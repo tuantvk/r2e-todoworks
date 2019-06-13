@@ -1,4 +1,5 @@
 import { observable, action } from 'mobx';
+import { STATUS } from '../consts';
 
 class Todos {
 	@observable list = [];
@@ -11,10 +12,28 @@ class Todos {
 			id: this.list.length,
 			name,
 			category,
-			status: 1,
+			status: STATUS.DOING,
 			priority: false
 		}
 		this.list.unshift(todo);
+	}
+
+	@action changeStatus(item, status) {
+		if (!status || !item) return;
+		this.list.map(t => {
+			if (t.id === item.id) {
+				t.status = status;
+			}
+		});
+	}
+
+	@action changePriority(item) {
+		if (!item) return;
+		this.list.map(t => {
+			if (t.id === item.id) {
+				t.priority = !t.priority;
+			}
+		});
 	}
 }
 

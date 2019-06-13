@@ -2,9 +2,9 @@ import React from 'react';
 import Item from './Item';
 import { observer, inject } from 'mobx-react';
 
-@inject(stores => ({
-  list: stores.todos.list,
-  addTodo: stores.todos.addTodo
+@inject(({ todos }) => ({
+  list: todos.list,
+  addTodo: todos.addTodo
 }))
 
 @observer

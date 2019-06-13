@@ -88,36 +88,6 @@ body {
   color: #ffffff;
   font-weight: bold;
 }
-.progress {
-  position: relative;
-  width: 100%;
-  height: 15px;
-  margin: 0 0 20px;
-  background: #2e2d33;
-  border-radius: 3px;
-}
-.progress .pause-bar,
-.progress .complete-bar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.progress .pause-bar svg,
-.progress .complete-bar svg {
-  height: 15px;
-  border-radius: 3px;
-}
-.reset {
-  text-align: center;
-}
-.reset button {
-  background: transparent;
-  border: none;
-  color: #fbfafb;
-  cursor: pointer;
-  font-size: 20px;
-  animation: fadeIn 1s;
-}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -130,48 +100,57 @@ body {
   display: flex;
   align-items: center;
   margin: 0 0 10px 0;
-  padding: 5px;
+  padding: 5px 0px;
   width: 100%;
   min-height: 30px;
-  border: none;
   box-sizing: border-box;
   font-size: 16px;
   overflow: hidden;
 }
-.item .item-name {
+.item-done {
+  text-decoration-line: line-through;
+  text-decoration-color: rgb(82, 255, 38);
+}
+.item-name {
   width: 400px;
   word-break: break-all;
   color: #fff;
 }
-.item .complete {
-  position: relative;
-  height: 18px;;
+.item button {
+  height: 18px;
   border: none;
   outline: none;
+  position: relative;
+  width: 18px;
+}
+.complete {
   margin-right: 15px;
-}
-.buttons button.delete {
-  width: 18px;
-  background: no-repeat url('./assets/images/x.svg');
-}
-.buttons button.delete:after {
-  background: #e1675a;
-}
-.buttons button.pause {
-  width: 18px;
-  background: no-repeat url('./assets/images/pause.svg');
-}
-.buttons button.pause:after {
-  background: #f7f879;
-}
-button.complete {
-  width: 18px;
   background: no-repeat url('./assets/images/check.svg');
 }
-.item .buttons button.complete:after {
+.complete:after {
   background: #62dca5;
 }
-.item .buttons button:after {
+.delete {
+  background: no-repeat url('./assets/images/x.svg');
+}
+.fire {
+  margin-left: 15px;
+  background: no-repeat url('./assets/images/fire.svg');
+}
+.fire:after {
+  background: #ff3821;
+}
+.delete:after {
+  background: #e1675a;
+}
+.rocket {
+  margin-left: 15px;
+  background: no-repeat url('./assets/images/rocket.svg');
+}
+.rocket:after {
+  background: #f7f879;
+}
+.item button:after {
   display: block;
   content: '';
   position: absolute;
@@ -182,9 +161,9 @@ button.complete {
   width: 0;
   height: 0;
 }
-.item .buttons button:focus {
+.item button:focus {
   outline: none;
 }
-.item .buttons button:focus:after {
+.item button:focus:after {
   animation: click .5s;
 }
