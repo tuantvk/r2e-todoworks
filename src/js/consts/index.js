@@ -3,3 +3,8 @@ export const STATUS = {
   DONE: 2,
   REMOVE: 3
 }
+
+export const PRIORITY = {
+  HIGHT: 1,
+  LOWER: 2
+}

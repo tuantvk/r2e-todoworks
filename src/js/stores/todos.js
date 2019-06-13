@@ -1,5 +1,7 @@
 import { observable, action } from 'mobx';
-import { STATUS } from '../consts';
+import { STATUS, PRIORITY } from '../consts';
+import _remove from "lodash/remove";
+import moment from 'moment';
 
 class Todos {
 	@observable list = [];
@@ -13,16 +15,17 @@ class Todos {
 			name,
 			category,
 			status: STATUS.DOING,
-			priority: false
+			priority: PRIORITY.LOWER,
+			date: moment().unix()
 		}
 		this.list.unshift(todo);
 	}
 
-	@action changeStatus(item, status) {
-		if (!status || !item) return;
+	@action changeStatus(item) {
+		if (!item) return;
 		this.list.map(t => {
 			if (t.id === item.id) {
-				t.status = status;
+				t.status = t.status === STATUS.DOING ? STATUS.DONE : STATUS.DOING
 			}
 		});
 	}
@@ -31,10 +34,16 @@ class Todos {
 		if (!item) return;
 		this.list.map(t => {
 			if (t.id === item.id) {
-				t.priority = !t.priority;
+				t.priority = t.priority === PRIORITY.LOWER ? PRIORITY.HIGHT : PRIORITY.LOWER
 			}
 		});
 	}
+
+	@action removeTodo(item) {
+		if (!item) return;
+		_remove(this.list, i => i.id === item.id);
+	}
+
 }
 
 const self = new Todos();

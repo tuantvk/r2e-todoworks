@@ -1,6 +1,9 @@
 import React from 'react';
 import Item from './Item';
 import { observer, inject } from 'mobx-react';
+import _sortBy from 'lodash/sortBy';
+import _filter from 'lodash/filter';
+import { STATUS } from '../consts';
 
 @inject(({ todos }) => ({
   list: todos.list,
@@ -19,6 +22,9 @@ export default class ItemList extends React.Component {
 
   render() {
     const { list } = this.props;
+    let listDoing = _filter(list, m => m.status === STATUS.DOING);
+    let listDone = _filter(list, m => m.status === STATUS.DONE);
+    let formatList = _sortBy(listDoing, ['priority']);
     return (
       <div className="item-list">
         <form className="form" onSubmit={this._addItem}>
@@ -28,16 +34,28 @@ export default class ItemList extends React.Component {
             autoFocus
           />
         </form>
+        <div className="list-doing">
+          {
+            formatList && formatList.map(item => {
+              return (
+                <Item
+                  item={item}
+                  text={item.name}
+                  status={item.status}
+                  key={item.id}
+                />
+              );
+            })
+          }
+        </div>
         {
-          list && list.map(item => {
+          listDone && listDone.map(item => {
             return (
               <Item
                 item={item}
                 text={item.name}
                 status={item.status}
                 key={item.id}
-                onComplete={this.completeItem}
-                onDelete={this.props.deleteItem}
               />
             );
           })
