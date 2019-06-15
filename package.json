@@ -1,6 +1,6 @@
 {
   "name": "r2e-todoworks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "r2e-todoworks built with React, MobX and Electron.",
   "main": "main.js",
   "scripts": {
