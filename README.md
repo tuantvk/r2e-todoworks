@@ -2,7 +2,7 @@
 
 todoworks for desktop use React, Electron and Mobx
 
-![Demo layout](https://github.com/tuantvk/r2e-todoworks/tree/master/resource/todos.png)
+![Demo layout](https://github.com/tuantvk/r2e-todoworks/blob/master/resource/todos.png)
 
 ## Table of Content
 
