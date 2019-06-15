@@ -61,20 +61,21 @@ body {
   width: 550px;
 }
 ::-webkit-scrollbar {
-  background-color: #403f4d;
-  width: 0.5em;
+  background-color: #54535c;
+  width: 3px;
 }
-/* ::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb:window-inactive,
 ::-webkit-scrollbar-thumb {
   background: #2e2d33;
-  border: 3px solid #403f4d;
-  border-radius: 0.5em;
-} */
+  border: 3px solid #e6e6e6;
+  border-radius: 6px;
+}
 .app {
   background-color: #3c4249;
   border-radius: 6px;
   padding: 1em 2em;
-  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 500px;
 }
 .form {
   position: relative;
