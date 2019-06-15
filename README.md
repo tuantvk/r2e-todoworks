@@ -8,11 +8,22 @@ todoworks for desktop use React, Electron and Mobx
 
 1. [Development](#1-development)
 2. [How to use it?](#2-how-to-use-it)
-3. [License](#3-license)
+3. [Contributing](#3-contributing)
+4. [License](#4-license)
 
 ## 1. Development
+
+- Clone the repo:
 ```
-$ npm install
+git clone https://github.com/tuantvk/r2e-todoworks.git
+```
+
+- Go to the project directory and install dependencies: 
+```
+cd r2e-todoworks && npm install
+```
+
+```
 $ npm run dev
 ```
 
@@ -33,11 +44,17 @@ After that, you will see the binary in `./release` folder
 | Icon  | Description |
 | ------------- | ------------- |
 | Check | Click when todo done  |
-| Fire | Todo in status warning |
+| Fire | Todo in status warning, and move on top |
 | Rocket | Click when you want change status todo normal to warning |
-| Like | Todo in status done |
+| Like | Todo in status done and move down in list todo done |
 | Close | Remove todo |
 
-## 3. License
+## 3. Contributing
+
+So you want to contribute? Fun! I love seeing new PRs for r2e-todoworks.
+If you are thinking about working on something, feel free to make an issue beforehand so that you can make sure it'll be worth your time!
+
+
+## 4. License
 
 MIT License
