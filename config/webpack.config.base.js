@@ -98,7 +98,7 @@ export default {
         filename: 'bundle.js',
 
         // https://github.com/webpack/webpack/issues/1114
-        libraryTarget: 'commonjs2'
+        libraryTarget: 'commonjs2',
     },
 
     resolve: {

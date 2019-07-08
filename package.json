@@ -1,6 +1,6 @@
 {
   "name": "r2e-todoworks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "r2e-todoworks built with React, MobX and Electron.",
   "main": "main.js",
   "scripts": {
@@ -27,6 +27,16 @@
     "type": "git",
     "url": "https://github.com/tuantvk"
   },
+  "keywords": [
+    "todos ",
+    "tasks",
+    "lists",
+    "todo",
+    "reminders",
+    "checklist",
+    "note",
+    "timemanage"
+  ],
   "license": "MIT",
   "build": {
     "productName": "r2e-todoworks",
@@ -124,11 +134,13 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
+    "react-optimize": "^2.0.0",
     "style-loader": "^0.21.0",
     "stylelint": "^9.3.0",
     "stylelint-config-standard": "^18.2.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.16.1",
+    "webpack-cli": "^3.3.4",
     "webpack-dev-middleware": "^3.1.3",
     "webpack-hot-middleware": "^2.20.0"
   }

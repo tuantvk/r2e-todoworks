@@ -245,7 +245,7 @@ const createMainWindow = () => {
         `file://${__dirname}/src/index.html`
     );
 
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 
     mainWindow.webContents.on('did-finish-load', () => {
         try {
