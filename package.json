@@ -134,7 +134,6 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
-    "react-optimize": "^2.0.0",
     "style-loader": "^0.21.0",
     "stylelint": "^9.3.0",
     "stylelint-config-standard": "^18.2.0",

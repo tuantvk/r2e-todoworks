@@ -2,9 +2,6 @@
   "presets": ["es2015", "react", "stage-0"],
   "plugins": ["babel-polyfill", "transform-decorators-legacy"],
   "env": {
-      "production": {
-          "presets": ["react-optimize"]
-      },
       "development": {
           "presets": ["react-hmre"]
       }
