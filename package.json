@@ -1,6 +1,6 @@
 {
   "name": "r2e-todoworks",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "r2e-todoworks built with React, MobX and Electron.",
   "main": "main.js",
   "scripts": {
@@ -21,7 +21,8 @@
     "dev": "concurrently --kill-others \"npm run hot-server\" \"npm run start-hot\""
   },
   "author": {
-    "name": "TuanTVK"
+    "name": "TuanTVK",
+    "url": "https://tuantvk.github.io"
   },
   "repository": {
     "type": "git",
